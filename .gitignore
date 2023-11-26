@@ -1,5 +1,3 @@
-backend/node_modules
-client/node_modules
-backend/.env
-backend
-client/ .env
+node_modules
+.env
+README.md
