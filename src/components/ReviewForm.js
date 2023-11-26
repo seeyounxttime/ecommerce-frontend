@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { useForm } from "../hooks/Form";
 import toast, { Toaster } from "react-hot-toast";

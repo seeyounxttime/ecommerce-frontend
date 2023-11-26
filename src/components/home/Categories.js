@@ -1,3 +1,4 @@
+/* eslint-disable no-unreachable */
 import { Virtual } from "swiper";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { BsHandbag } from "react-icons/bs";

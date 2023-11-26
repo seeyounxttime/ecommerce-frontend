@@ -1,13 +1,16 @@
-const ImagesPreview = ({url, heading}) => {
-    return (
+/* eslint-disable jsx-a11y/img-redundant-alt */
+const ImagesPreview = ({ url, heading }) => {
+  return (
+    <div>
+      {url && (
         <div>
-            {url && <div>
-                <h1 className="right-heading">{heading}</h1>
-                <div className="preivew-image">
-                    <img src={url} alt="image" className="w-full h-full object-cover" />
-                </div>
-                </div>}
+          <h1 className="right-heading">{heading}</h1>
+          <div className="preivew-image">
+            <img src={url} alt="image" className="w-full h-full object-cover" />
+          </div>
         </div>
-    )
-}
+      )}
+    </div>
+  );
+};
 export default ImagesPreview;

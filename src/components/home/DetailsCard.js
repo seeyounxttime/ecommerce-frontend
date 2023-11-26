@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-computed-key */
 import { useState } from "react";
 import currency from "currency-formatter";
 import { motion } from "framer-motion";

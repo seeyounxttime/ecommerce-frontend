@@ -12,7 +12,6 @@ import {
   decQuantity,
   removeItem,
 } from "../../store/reducers/cartReducer";
-import { Link } from "react-router-dom";
 import { useSendPaymentMutation } from "../../store/services/paymentService";
 
 const Cart = () => {

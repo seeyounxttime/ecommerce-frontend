@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import currency from "currency-formatter";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";

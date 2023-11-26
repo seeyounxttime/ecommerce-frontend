@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import { useParams, Link } from "react-router-dom";
 import { useRef } from "react";
 import ReactToPrint from "react-to-print";

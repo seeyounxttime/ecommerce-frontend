@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";

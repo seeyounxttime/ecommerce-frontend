@@ -82,7 +82,7 @@ const UserOrderDetails = () => {
                       <DetailsList
                         label="received date"
                         data={moment(data?.details?.updatedAt).format(
-                          "MMMM Do YYYY"
+                          "MMMM DD YYYY"
                         )}
                       />
                     )}

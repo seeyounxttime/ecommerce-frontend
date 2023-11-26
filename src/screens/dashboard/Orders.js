@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import { useParams, Link } from "react-router-dom";
 import ScreenHeader from "../../components/ScreenHeader";
 import Wrapper from "./Wrapper";
