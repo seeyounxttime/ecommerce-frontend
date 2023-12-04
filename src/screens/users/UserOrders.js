@@ -48,7 +48,7 @@ const UserOrders = () => {
                           </tr>
                         </thead>
                         <tbody>
-                          {data?.orders.map((item) => {
+                          {data?.orders?.map((item) => {
                             const total = currency.format(
                               discount(
                                 item.productId.price,
