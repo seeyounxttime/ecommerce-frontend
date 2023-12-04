@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import currency from "currency-formatter";
@@ -48,7 +47,7 @@ const UserOrders = () => {
                           </tr>
                         </thead>
                         <tbody>
-                          {data?.orders?.map((item) => {
+                          {data?.orders.map((item) => {
                             const total = currency.format(
                               discount(
                                 item.productId.price,
