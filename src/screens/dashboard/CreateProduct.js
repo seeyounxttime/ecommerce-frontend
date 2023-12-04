@@ -49,7 +49,7 @@ const CreateProduct = () => {
     image2: "",
     image3: "",
   });
-  const imageHandle = (e) => {
+  const imageHandle = (e) => { // xử lý hình ảnh up lên
     if (e.target.files.length !== 0) {
       setState({ ...state, [e.target.name]: e.target.files[0] });
       const reader = new FileReader();
@@ -62,22 +62,22 @@ const CreateProduct = () => {
   const handleInput = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
-  const saveColors = (color) => {
+  const saveColors = (color) => { // xử lý lưu màu cho product
     const filtered = state.colors.filter((clr) => clr.color !== color.hex);
     setState({
       ...state,
       colors: [...filtered, { color: color.hex, id: uuidv4() }],
     });
   };
-  const deleteColor = (color) => {
+  const deleteColor = (color) => { // xử lý xóa màu cho product
     const filtered = state.colors.filter((clr) => clr.color !== color.color);
     setState({ ...state, colors: filtered });
   };
-  const chooseSize = (sizeObject) => {
+  const chooseSize = (sizeObject) => { // xử lý chọn size cho product
     const filtered = sizeList.filter((size) => size.name !== sizeObject.name);
     setSizeList([...filtered, sizeObject]);
   };
-  const deleteSize = (name) => {
+  const deleteSize = (name) => { // xử lý xóa size cho product
     const filtered = sizeList.filter((size) => size.name !== name);
     setSizeList(filtered);
   };
@@ -113,7 +113,7 @@ const CreateProduct = () => {
     <Wrapper>
       <ScreenHeader>
         <Link to="/dashboard/products" className="btn-dark">
-          <i className="bi bi-arrow-left-short"></i> proudcts list
+          <i className="bi bi-arrow-left-short"></i> products list
         </Link>
       </ScreenHeader>
       <Toaster position="top-right" reverseOrder={true} />
@@ -190,7 +190,7 @@ const CreateProduct = () => {
                     value={state.category}
                   >
                     <option value="">Choose category</option>
-                    {data?.categories?.map((category) => (
+                    {data?.categories?.map((category) => ( // chọn category cho product
                       <option value={category.name} key={category._id}>
                         {category.name}
                       </option>
@@ -212,7 +212,7 @@ const CreateProduct = () => {
               <label htmlFor="sizes" className="label">
                 choose sizes
               </label>
-              {sizes.length > 0 && (
+              {sizes.length > 0 && ( // chọn size cho product
                 <div className="flex flex-wrap -mx-3">
                   {sizes.map((size) => (
                     <div
@@ -265,8 +265,8 @@ const CreateProduct = () => {
               />
             </div>
             <div className="w-full p-3">
-              <label htmlFor="description" className="label">
-                Description
+              <label htmlFor="description" className="label"> 
+                Description 
               </label>
               <ReactQuill
                 theme="snow"
@@ -274,7 +274,7 @@ const CreateProduct = () => {
                 value={value}
                 onChange={setValue}
                 placeholder="Description..."
-              />
+              /> 
             </div>
             <div className="w-full p-3">
               <input

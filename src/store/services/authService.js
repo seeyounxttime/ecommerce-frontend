@@ -7,8 +7,8 @@ const authService = createApi({
   }),
   endpoints: (builder) => {
     return {
-      authLogin: builder.mutation({
-        query: (loginData) => {
+      authLogin: builder.mutation({ // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+        query: (loginData) => { // đăng nhập
           return {
             url: "login",
             method: "POST",
@@ -16,8 +16,8 @@ const authService = createApi({
           };
         },
       }),
-      userRegister: builder.mutation({
-        query: (data) => {
+      userRegister: builder.mutation({ // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+        query: (data) => { // đăng ký
           return {
             url: "/register",
             method: "POST",
@@ -25,8 +25,8 @@ const authService = createApi({
           };
         },
       }),
-      userLogin: builder.mutation({
-        query: (loginData) => {
+      userLogin: builder.mutation({ // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+        query: (loginData) => { // đăng nhập
           return {
             url: "/login",
             method: "POST",

@@ -24,7 +24,7 @@ const AdminLogin = () => {
   };
   const dispatch = useDispatch();
   useEffect(() => {
-    if (response.isSuccess) {
+    if (response.isSuccess) { // nếu đăng nhập thành công thì chuyển trang tới trang tạo sản phẩm và xem sản phẩm đã tạo
       localStorage.setItem("admin-token", response?.data?.token);
       dispatch(setAdminToken(response?.data?.token));
       navigate("/dashboard/products");

@@ -27,7 +27,7 @@ const Nav = () => {
                   onClick={() => dispatch(toggleSearchBar())}
                 />
               </li>
-              {userToken ? (
+              {userToken ? ( // kiểm tra token của user, nếu đã đăng nhập thì có thể xem thông tin của mình và đặt hàng, không có thì hiện nút sign in để đăng nhập
                 <li className="nav-li">
                   <Link to="/user" className="nav-link">
                     {user?.name}

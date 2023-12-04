@@ -14,8 +14,8 @@ const orderService = createApi({
   }),
   endpoints: (builder) => {
     return {
-      getOrders: builder.query({
-        query: (page) => {
+      getOrders: builder.query({ // định nghĩa endpoints
+        query: (page) => { // lấy thông tin order
           return {
             url: `/orders?page=${page}`,
             method: "GET",
@@ -23,8 +23,8 @@ const orderService = createApi({
         },
         providesTags: ["orders"],
       }),
-      details: builder.query({
-        query: (id) => {
+      details: builder.query({ // định nghĩa endpoints
+        query: (id) => { // lấy chi tiết order
           return {
             url: `/order-details/${id}`,
             method: "GET",
@@ -32,8 +32,8 @@ const orderService = createApi({
         },
         providesTags: ["orders"],
       }),
-      deliverOrder: builder.mutation({
-        query: (id) => {
+      deliverOrder: builder.mutation({ // định nghĩa endpoints
+        query: (id) => { // tình trạng order
           return {
             url: `/order-update?id=${id}&status=delivered`,
             method: "PUT",

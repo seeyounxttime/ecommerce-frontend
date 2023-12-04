@@ -18,7 +18,7 @@ const Slider = () => {
       modules={[Pagination]}
       className="mySwiper"
     >
-      {data?.categories.length > 0 &&
+      {data?.categories.length > 0 && // banner đầu trang 
         data?.categories.map((cat, index) => (
           <SwiperSlide className="slide" key={cat._id}>
             <div className={`slide-img`}>

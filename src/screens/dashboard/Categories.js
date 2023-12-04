@@ -21,7 +21,7 @@ const Categories = () => {
   const { data = [], isFetching } = useGetQuery(page);
   const [removeCategory, response] = useDeleteCategoryMutation();
   console.log(data);
-  const deleteCat = (id) => {
+  const deleteCat = (id) => { // thông báo xác nhận xóa category
     if (window.confirm("Are you really want to delete the category?")) {
       removeCategory(id);
     }
@@ -45,7 +45,7 @@ const Categories = () => {
       </ScreenHeader>
       {success && <div className="alert-success">{success}</div>}
       {!isFetching ? (
-        data?.categories?.length > 0 && (
+        data?.categories?.length > 0 && ( // nếu có category thì show ra, nếu không thì load spinner
           <>
             <div>
               <table className="w-full bg-gray-900 rounded-md">
@@ -63,7 +63,7 @@ const Categories = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {data?.categories?.map((category) => (
+                  {data?.categories?.map((category) => ( // dùng map để render ra category (nếu có)
                     <tr key={category._id} className="odd:bg-gray-800">
                       <td className="p-3 capitalize text-sm font-normal text-gray-400">
                         {category.name}

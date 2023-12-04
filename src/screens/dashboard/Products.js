@@ -73,7 +73,7 @@ const Products = () => {
                 </tr>
               </thead>
               <tbody>
-                {data?.products?.map((product) => (
+                {data?.products?.map((product) => ( // render thông tin product
                   <tr className="odd:bg-gray-800" key={product._id}>
                     <td className="p-3 capitalize text-sm font-normal text-gray-400">
                       {product.title}

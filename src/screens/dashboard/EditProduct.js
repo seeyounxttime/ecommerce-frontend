@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -104,7 +106,7 @@ const EditProduct = () => {
     <Wrapper>
       <ScreenHeader>
         <Link to="/dashboard/products" className="btn-dark">
-          <i className="bi bi-arrow-left-short"></i> proudcts list
+          <i className="bi bi-arrow-left-short"></i> products list
         </Link>
       </ScreenHeader>
       <Toaster position="top-right" reverseOrder={true} />

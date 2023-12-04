@@ -73,6 +73,7 @@ const Cart = () => {
                 </thead>
                 <tbody>
                   {cart.map((item) => {
+                    // render sản phẩm trong giỏ hàng
                     const total = currency.format(
                       discount(item.price, item.discount) * item.quantity,
                       {

@@ -78,7 +78,7 @@ const UserOrderDetails = () => {
                         "MMMM Do YYYY"
                       )}
                     />
-                    {data?.details?.received && (
+                    {data?.details?.received && ( // xác nhận đã nhận hàng
                       <DetailsList
                         label="received date"
                         data={moment(data?.details?.updatedAt).format(
@@ -86,7 +86,7 @@ const UserOrderDetails = () => {
                         )}
                       />
                     )}
-                    {data?.details?.received && !data?.details?.review && (
+                    {data?.details?.received && !data?.details?.review && ( // xác nhận đã nhận hàng và chưa có đánh giá
                       <div className="flex mt-2 items-center justify-between">
                         <h4 className="capitalize text-base font-normal text-gray-600 mr-5">
                           add rating
