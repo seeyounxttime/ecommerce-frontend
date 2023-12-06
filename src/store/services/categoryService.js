@@ -4,7 +4,7 @@ const categoryService = createApi({
   reducerPath: "category",
   tagTypes: "categories",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://misty-colt-hoodie.cyclic.app/api/",
+    baseUrl: "https://ecommerce-kxrg.onrender.com/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.adminToken;

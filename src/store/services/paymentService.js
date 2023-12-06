@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const paymentService = createApi({
   reducerPath: "payment",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://misty-colt-hoodie.cyclic.app/api/",
+    baseUrl: "https://ecommerce-kxrg.onrender.com/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.userToken;
