@@ -15,9 +15,9 @@ const userOrdersService = createApi({
   endpoints: (builder) => {
     return {
       getOrders: builder.query({
-        // định nghĩa endpoints
+       
         query: (data) => {
-          // lấy thông tin order
+          
           return {
             url: `/orders?page=${data.page}&userId=${data.userId}`,
             method: "GET",
@@ -26,9 +26,9 @@ const userOrdersService = createApi({
         providesTags: ["orders"],
       }),
       details: builder.query({
-        // định nghĩa endpoints
+        
         query: (id) => {
-          // lấy chi tiết order
+         
           return {
             url: `/order-details/${id}`,
             method: "GET",
@@ -37,9 +37,9 @@ const userOrdersService = createApi({
         providesTags: ["orders"],
       }),
       receivedOrder: builder.mutation({
-        // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+        
         query: (id) => {
-          // xác nhận tình trạng order
+          
           return {
             url: `/order-update?id=${id}&status=received`,
             method: "PUT",
@@ -48,9 +48,9 @@ const userOrdersService = createApi({
         invalidatesTags: ["orders"],
       }),
       postReview: builder.mutation({
-        // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+       
         query: (body) => {
-          // đăng đánh giá
+          
           return {
             url: `/add-review`,
             method: "POST",
