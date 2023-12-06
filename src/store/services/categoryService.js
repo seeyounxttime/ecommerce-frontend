@@ -4,7 +4,7 @@ const categoryService = createApi({
   reducerPath: "category",
   tagTypes: "categories",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://ecommerce-kxrg.onrender.com/api/",
+    baseUrl: "https://misty-colt-hoodie.cyclic.app/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.adminToken;
@@ -16,9 +16,7 @@ const categoryService = createApi({
   endpoints: (builder) => {
     return {
       create: builder.mutation({
-      
         query: (name) => {
-         
           return {
             url: "create-category",
             method: "POST",
@@ -28,9 +26,7 @@ const categoryService = createApi({
         invalidatesTags: ["categories"],
       }),
       updateCategory: builder.mutation({
-       
         query: (data) => {
-          
           return {
             url: `update-category/${data.id}`,
             method: "PUT",
@@ -40,9 +36,7 @@ const categoryService = createApi({
         invalidatesTags: ["categories"],
       }),
       deleteCategory: builder.mutation({
-       
         query: (id) => {
-          
           return {
             url: `delete-category/${id}`,
             method: "DELETE",
@@ -51,9 +45,7 @@ const categoryService = createApi({
         invalidatesTags: ["categories"],
       }),
       get: builder.query({
-       
         query: (page) => {
-          
           return {
             url: `categories/${page}`,
             method: "GET",
@@ -62,9 +54,7 @@ const categoryService = createApi({
         providesTags: ["categories"],
       }),
       fetchCategory: builder.query({
-        
         query: (id) => {
-
           return {
             url: `fetch-category/${id}`,
             method: "GET",
@@ -73,9 +63,7 @@ const categoryService = createApi({
         providesTags: ["categories"],
       }),
       allCategories: builder.query({
-        
         query: () => {
-          
           return {
             url: "allcategories",
             method: "GET",
@@ -83,9 +71,7 @@ const categoryService = createApi({
         },
       }),
       randomCategories: builder.query({
-       
         query: () => {
-         
           return {
             url: "random-categories",
             method: "GET",

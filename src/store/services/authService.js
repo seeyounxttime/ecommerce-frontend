@@ -3,14 +3,12 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const authService = createApi({
   reducerPath: "auth",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://ecommerce-kxrg.onrender.com/api/",
+    baseUrl: "https://misty-colt-hoodie.cyclic.app/api/",
   }),
   endpoints: (builder) => {
     return {
       authLogin: builder.mutation({
-        
         query: (loginData) => {
-          
           return {
             url: "login",
             method: "POST",
@@ -19,9 +17,7 @@ const authService = createApi({
         },
       }),
       userRegister: builder.mutation({
-        
         query: (data) => {
-         
           return {
             url: "/register",
             method: "POST",
@@ -30,9 +26,7 @@ const authService = createApi({
         },
       }),
       userLogin: builder.mutation({
-      
         query: (loginData) => {
-         
           return {
             url: "/login",
             method: "POST",

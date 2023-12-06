@@ -4,7 +4,7 @@ const userOrdersService = createApi({
   reducerPath: "user-orders",
   tagTypes: "orders",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://ecommerce-kxrg.onrender.com/api/",
+    baseUrl: "https://misty-colt-hoodie.cyclic.app/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.userToken;
@@ -15,9 +15,7 @@ const userOrdersService = createApi({
   endpoints: (builder) => {
     return {
       getOrders: builder.query({
-       
         query: (data) => {
-          
           return {
             url: `/orders?page=${data.page}&userId=${data.userId}`,
             method: "GET",
@@ -26,9 +24,7 @@ const userOrdersService = createApi({
         providesTags: ["orders"],
       }),
       details: builder.query({
-        
         query: (id) => {
-         
           return {
             url: `/order-details/${id}`,
             method: "GET",
@@ -37,9 +33,7 @@ const userOrdersService = createApi({
         providesTags: ["orders"],
       }),
       receivedOrder: builder.mutation({
-        
         query: (id) => {
-          
           return {
             url: `/order-update?id=${id}&status=received`,
             method: "PUT",
@@ -48,9 +42,7 @@ const userOrdersService = createApi({
         invalidatesTags: ["orders"],
       }),
       postReview: builder.mutation({
-       
         query: (body) => {
-          
           return {
             url: `/add-review`,
             method: "POST",

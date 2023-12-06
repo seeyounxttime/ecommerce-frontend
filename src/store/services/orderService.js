@@ -4,7 +4,7 @@ const orderService = createApi({
   reducerPath: "orders",
   tagTypes: "orders",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://ecommerce-kxrg.onrender.com/api/",
+    baseUrl: "https://misty-colt-hoodie.cyclic.app/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.adminToken;

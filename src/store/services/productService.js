@@ -4,7 +4,7 @@ const productService = createApi({
   reducerPath: "products",
   tagTypes: "products",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://ecommerce-kxrg.onrender.com/api/",
+    baseUrl: "https://misty-colt-hoodie.cyclic.app/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.adminToken;
@@ -16,9 +16,7 @@ const productService = createApi({
   endpoints: (builder) => {
     return {
       cProduct: builder.mutation({
-      
         query: (data) => {
-         
           return {
             url: "/create-product",
             method: "POST",
@@ -28,9 +26,7 @@ const productService = createApi({
         invalidatesTags: ["products"],
       }),
       updateProduct: builder.mutation({
-        
         query: (data) => {
-          
           return {
             url: "/product",
             method: "PUT",
@@ -40,9 +36,7 @@ const productService = createApi({
         invalidatesTags: ["products"],
       }),
       deleteProduct: builder.mutation({
-        
         query: (id) => {
-         
           return {
             url: `/delete/${id}`,
             method: "DELETE",
@@ -51,9 +45,7 @@ const productService = createApi({
         invalidatesTags: ["products"],
       }),
       getProducts: builder.query({
-       
         query: (page) => {
-          
           return {
             url: `/products/${page}`,
             method: "GET",
@@ -62,9 +54,7 @@ const productService = createApi({
         providesTags: ["products"],
       }),
       getProduct: builder.query({
-       
         query: (id) => {
-          
           return {
             url: `/product/${id}`,
             method: "GET",
