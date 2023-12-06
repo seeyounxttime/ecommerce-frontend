@@ -103,7 +103,7 @@ const Login = () => {
               </div>
               <div>
                 <p>
-                  Don't have an account ?{" "}
+                  Don't have an account?{" "}
                   <span className="capitalize font-medium text-base text-black">
                     <Link to="/register">register</Link>
                   </span>

@@ -29,7 +29,7 @@ const Orders = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {data?.orders?.map((order) => ( // render thông tin order
+                  {data?.orders?.map((order) => (
                     <tr key={order._id}>
                       <td className="dashboard-td">{order.productId.title}</td>
                       <td className="dashboard-td">{order.quantities}</td>

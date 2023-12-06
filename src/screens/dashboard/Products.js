@@ -75,7 +75,7 @@ const Products = () => {
               <tbody>
                 {data?.products?.map(
                   (
-                    product // render thông tin product
+                    product
                   ) => (
                     <tr className="odd:bg-slate-800" key={product._id}>
                       <td className="p-3 capitalize text-sm font-normal text-slate-400">

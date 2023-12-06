@@ -14,9 +14,9 @@ const paymentService = createApi({
   endpoints: (builder) => {
     return {
       sendPayment: builder.mutation({
-        // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+        
         query: (cart) => {
-          // tạo trang thanh toán
+          
           return {
             url: "/create-checkout-session",
             method: "POST",
@@ -25,9 +25,9 @@ const paymentService = createApi({
         },
       }),
       verifyPayment: builder.query({
-        // định nghĩa endpoints
+       
         query: (id) => {
-          // lấy thông tin thanh toán
+         
           return {
             url: `verify-payment/${id}`,
             method: "GET",

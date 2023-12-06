@@ -28,7 +28,6 @@ const SearchProducts = () => {
             </p>
             <div className="flex flex-wrap -mx-5">
               {data.products.map((product) => {
-                // tìm sản phẩm theo keyword
                 return <ProductCard product={product} key={product._id} />;
               })}
             </div>

@@ -47,7 +47,6 @@ const DetailsCard = ({ product }) => {
     const cartItems = cart ? JSON.parse(cart) : [];
     const checkItem = cartItems.find((item) => item._id === newProduct._id);
     if (!checkItem) {
-      // kiểm tra xem sản phẩm đã có trong cửa hàng chưa, nếu chưa thì thêm, nếu rồi thì hiện thông báo đã thêm
       dispatch(addCart(newProduct));
       cartItems.push(newProduct);
       localStorage.setItem("cart", JSON.stringify(cartItems));
