@@ -40,7 +40,7 @@ const OrderDetails = () => {
           <span className="ml-4">
             <ReactToPrint
               trigger={() => (
-                <button className="flex items-center btn bg-indigo-600 py-1 text-sm font-semibold px-3">
+                <button className="flex items-center btn bg-sky-600 py-1 text-sm font-semibold px-3">
                   <BsPrinter /> <span className="ml-2">print</span>
                 </button>
               )}
@@ -61,22 +61,22 @@ const OrderDetails = () => {
       </ScreenHeader>
       {!isFetching ? (
         <div ref={componentRef}>
-          <h3 className="capitalize text-gray-400">
+          <h3 className="capitalize text-slate-400">
             order number:{" "}
-            <span className="text-lg text-gray-300 ml-4">
+            <span className="text-lg text-slate-300 ml-4">
               #{data?.details?._id}
             </span>
           </h3>
-          <h3 className="capitalize text-gray-400 mt-2">
+          <h3 className="capitalize text-slate-400 mt-2">
             order date:{" "}
-            <span className="text-sm text-gray-300 ml-4">
+            <span className="text-sm text-slate-300 ml-4">
               {moment(data?.details?.createdAt).format("MMMM Do YYYY")}
             </span>
           </h3>
           {data?.details?.received && (
-            <h3 className="capitalize text-gray-400 mt-2">
+            <h3 className="capitalize text-slate-400 mt-2">
               received date:{" "}
-              <span className="text-sm text-gray-300 ml-4">
+              <span className="text-sm text-slate-300 ml-4">
                 {moment(data?.details?.updatedAt).format("MMMM Do YYYY")}
               </span>
             </h3>
@@ -85,7 +85,7 @@ const OrderDetails = () => {
           <div className="flex flex-wrap -mx-5">
             <div className="w-full md:w-8/12 p-5">
               <div>
-                <table className="bg-transparent border-gray-600 rounded-none md:rounded-md dashboard-table">
+                <table className="bg-transparent border-slate-600 rounded-none md:rounded-md dashboard-table">
                   <thead>
                     <tr className="dashboard-tr">
                       <th className="dashboard-th">image</th>
@@ -135,39 +135,39 @@ const OrderDetails = () => {
               </div>
             </div>
             <div className="w-full md:w-4/12 p-5">
-              <div className="border border-gray-600 rounded-none md:rounded-md p-4">
-                <div className="border-b pb-3 border-b-gray-600">
-                  <h4 className="capitalize text-base text-gray-500">
+              <div className="border border-slate-600 rounded-none md:rounded-md p-4">
+                <div className="border-b pb-3 border-b-slate-600">
+                  <h4 className="capitalize text-base text-slate-500">
                     customer name
                   </h4>
-                  <span className="text-gray-400 text-base font-medium capitalize mt-2">
+                  <span className="text-slate-400 text-base font-medium capitalize mt-2">
                     {data?.details?.userId?.name}
                   </span>
                 </div>
-                <div className="border-b pb-3 border-b-gray-600">
-                  <h4 className="capitalize text-base text-gray-500">
+                <div className="border-b pb-3 border-b-slate-600">
+                  <h4 className="capitalize text-base text-slate-500">
                     product name
                   </h4>
-                  <span className="text-gray-400 text-base font-medium capitalize mt-2">
+                  <span className="text-slate-400 text-base font-medium capitalize mt-2">
                     {data?.details?.productId?.title}
                   </span>
                 </div>
 
                 <div>
-                  <h4 className="capitalize text-base text-gray-500 mt-2">
+                  <h4 className="capitalize text-base text-slate-500 mt-2">
                     shipping address
                   </h4>
                   <div className="mt-2">
-                    <span className="text-gray-400 capitalize block">
+                    <span className="text-slate-400 capitalize block">
                       {data?.details?.address?.city}
                     </span>
-                    <span className="text-gray-400 capitalize block">
+                    <span className="text-slate-400 capitalize block">
                       {data?.details?.address?.line1}
                     </span>
-                    <span className="text-gray-400 capitalize block">
+                    <span className="text-slate-400 capitalize block">
                       {data?.details?.address?.line2}
                     </span>
-                    <span className="text-gray-400 capitalize block">
+                    <span className="text-slate-400 capitalize block">
                       {data?.details?.address?.postal_code}
                     </span>
                   </div>

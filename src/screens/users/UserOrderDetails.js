@@ -45,7 +45,7 @@ const UserOrderDetails = () => {
               <h1 className="heading flex items-center">
                 {" "}
                 <MdOutlineKeyboardBackspace
-                  className="cursor-pointer text-gray-500"
+                  className="cursor-pointer text-slate-500"
                   onClick={() => navigate(-1)}
                 />{" "}
                 <span className="ml-5">details</span>
@@ -89,7 +89,7 @@ const UserOrderDetails = () => {
                     {data?.details?.received &&
                       !data?.details?.review && ( // xác nhận đã nhận hàng và chưa có đánh giá
                         <div className="flex mt-2 items-center justify-between">
-                          <h4 className="capitalize text-base font-normal text-gray-600 mr-5">
+                          <h4 className="capitalize text-base font-normal text-slate-600 mr-5">
                             add rating
                           </h4>
                           <button
@@ -114,7 +114,7 @@ const UserOrderDetails = () => {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="even:bg-gray-50">
+                          <tr className="even:bg-slate-50">
                             <td className="td">
                               <span
                                 className="block w-[15px] h-[15px] rounded-full"

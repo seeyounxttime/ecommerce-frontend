@@ -7,23 +7,23 @@
 }
 
 .pagination-link {
-  @apply border border-gray-800 text-gray-500 text-sm font-medium block py-2 px-4 bg-gray-900 border-r-0;
+  @apply border border-slate-800 text-slate-500 text-sm font-medium block py-2 px-4 bg-slate-900 border-r-0;
 }
 
 .pagination-link-light {
-  @apply border border-gray-400 text-gray-700 text-sm font-medium block py-2 px-4 bg-white border-r-0;
+  @apply border border-slate-400 text-slate-700 text-sm font-medium block py-2 px-4 bg-white border-r-0;
 }
 
 .pagination-li:last-child {
-  @apply border-r border-r-gray-400
+  @apply border-r border-r-slate-400;
 }
 
 .size {
-  @apply border border-gray-400 ml-2 px-3 py-1.5 mt-2 uppercase cursor-pointer rounded text-gray-400 text-sm;
+  @apply border border-slate-400 ml-2 px-3 py-1.5 mt-2 uppercase cursor-pointer rounded text-slate-400 text-sm;
 }
 
 .right-heading {
-  @apply capitalize my-2 text-gray-400 text-base;
+  @apply capitalize my-2 text-slate-400 text-base;
 }
 
 .preivew-image {
@@ -31,11 +31,11 @@
 }
 
 .ql-toolbar.ql-snow {
-  @apply border-none bg-gray-900 !important;
+  @apply border-none bg-slate-900 !important;
 }
 
 .ql-container.ql-snow {
-  @apply border-none bg-gray-700 !important;
+  @apply border-none bg-slate-700 !important;
 }
 
 .my-container {
@@ -59,11 +59,11 @@
 }
 
 .account-list-title {
-  @apply block ml-3 font-medium text-sm text-gray-700 capitalize;
+  @apply block ml-3 font-medium text-sm text-slate-700 capitalize;
 }
 
 a.active {
-  @apply bg-gray-50;
+  @apply bg-slate-50;
 }
 
 .description h1 {
@@ -81,7 +81,6 @@ a.active {
 .description h4 {
   @apply text-xl capitalize;
 }
-
 
 /* Swiper styles */
 .slide {

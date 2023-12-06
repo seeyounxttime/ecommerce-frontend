@@ -2,7 +2,7 @@
   @apply py-2 px-5 text-white rounded uppercase;
 }
 .btn-dark {
-  @apply bg-gray-900 px-4 py-3 capitalize font-medium;
+  @apply bg-slate-900 px-4 py-3 capitalize font-medium;
 }
 .btn-sky {
   @apply bg-sky-600 text-white capitalize font-medium px-4 py-3 cursor-pointer !important;

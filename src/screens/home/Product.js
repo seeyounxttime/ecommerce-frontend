@@ -18,17 +18,17 @@ const Product = () => {
         ) : (
           <>
             <ul className="flex items-center">
-              <li className="capitalize text-gray-600">
+              <li className="capitalize text-slate-600">
                 <Link to="/">home</Link>
               </li>
               <FiChevronRight className="block mx-2" />
-              <li className="capitalize text-gray-600">
+              <li className="capitalize text-slate-600">
                 <Link to={`/cat-products/${data.category}`}>
                   {data.category}
                 </Link>
               </li>
               <FiChevronRight className="block mx-2" />
-              <li className="capitalize text-gray-600">
+              <li className="capitalize text-slate-600">
                 <Link to={`/product/${data._id}`}>{data.title}</Link>
               </li>
             </ul>

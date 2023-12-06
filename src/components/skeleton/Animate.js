@@ -1,6 +1,6 @@
 const Animate = () => {
   return (
-    <div className="absolute inset-0 w-full h-full bg-gray-300 animate-ping"></div>
+    <div className="absolute inset-0 w-full h-full bg-slate-300 animate-ping"></div>
   );
 };
 

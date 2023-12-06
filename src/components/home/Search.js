@@ -41,7 +41,7 @@ const Search = () => {
               onChange={(e) => setState(e.target.value)}
             />
             <FiSearch
-              className="absolute top-[13px] right-12 text-2xl text-gray-500 cursor-pointer"
+              className="absolute top-[13px] right-12 text-2xl text-slate-500 cursor-pointer"
               onClick={searchProducts}
             />
           </div>

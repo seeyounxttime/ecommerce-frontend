@@ -21,7 +21,8 @@ const Categories = () => {
   const { data = [], isFetching } = useGetQuery(page);
   const [removeCategory, response] = useDeleteCategoryMutation();
   console.log(data);
-  const deleteCat = (id) => { // thông báo xác nhận xóa category
+  const deleteCat = (id) => {
+    // thông báo xác nhận xóa category
     if (window.confirm("Are you really want to delete the category?")) {
       removeCategory(id);
     }
@@ -48,44 +49,48 @@ const Categories = () => {
         data?.categories?.length > 0 && ( // nếu có category thì show ra, nếu không thì load spinner
           <>
             <div>
-              <table className="w-full bg-gray-900 rounded-md">
+              <table className="w-full bg-slate-900 rounded-md">
                 <thead>
-                  <tr className="border-b border-gray-800 text-left">
-                    <th className="p-3 uppercase text-sm font-medium text-gray-500">
+                  <tr className="border-b border-slate-800 text-left">
+                    <th className="p-3 uppercase text-sm font-medium text-slate-500">
                       name
                     </th>
-                    <th className="p-3 uppercase text-sm font-medium text-gray-500">
+                    <th className="p-3 uppercase text-sm font-medium text-slate-500">
                       edit
                     </th>
-                    <th className="p-3 uppercase text-sm font-medium text-gray-500">
+                    <th className="p-3 uppercase text-sm font-medium text-slate-500">
                       delete
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {data?.categories?.map((category) => ( // dùng map để render ra category (nếu có)
-                    <tr key={category._id} className="odd:bg-gray-800">
-                      <td className="p-3 capitalize text-sm font-normal text-gray-400">
-                        {category.name}
-                      </td>
-                      <td className="p-3 capitalize text-sm font-normal text-gray-400">
-                        <Link
-                          to={`/dashboard/update-category/${category._id}`}
-                          className="btn btn-warning"
-                        >
-                          edit
-                        </Link>
-                      </td>
-                      <td className="p-3 capitalize text-sm font-normal text-gray-400">
-                        <button
-                          className="btn btn-danger"
-                          onClick={() => deleteCat(category._id)}
-                        >
-                          delete
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
+                  {data?.categories?.map(
+                    (
+                      category // dùng map để render ra category (nếu có)
+                    ) => (
+                      <tr key={category._id} className="odd:bg-slate-800">
+                        <td className="p-3 capitalize text-sm font-normal text-slate-400">
+                          {category.name}
+                        </td>
+                        <td className="p-3 capitalize text-sm font-normal text-slate-400">
+                          <Link
+                            to={`/dashboard/update-category/${category._id}`}
+                            className="btn btn-warning"
+                          >
+                            edit
+                          </Link>
+                        </td>
+                        <td className="p-3 capitalize text-sm font-normal text-slate-400">
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => deleteCat(category._id)}
+                          >
+                            delete
+                          </button>
+                        </td>
+                      </tr>
+                    )
+                  )}
                 </tbody>
               </table>
             </div>

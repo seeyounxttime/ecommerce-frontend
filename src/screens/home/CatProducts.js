@@ -23,7 +23,7 @@ const CatProducts = () => {
           <ProductSkeleton />
         ) : data.count > 0 ? (
           <>
-            <p className="text-base font-medium text-gray-700">
+            <p className="text-base font-medium text-slate-700">
               {data.count} products found in #{name} category
             </p>
             <div className="flex flex-wrap -mx-5">

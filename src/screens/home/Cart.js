@@ -81,7 +81,7 @@ const Cart = () => {
                       }
                     );
                     return (
-                      <tr className="even:bg-gray-50" key={item._id}>
+                      <tr className="even:bg-slate-50" key={item._id}>
                         <td className="td">
                           <img
                             src={`/images/${item.image1}`}
@@ -99,7 +99,7 @@ const Cart = () => {
                         <td className="td">
                           <span className="font-semibold">{item.size}</span>
                         </td>
-                        <td className="td font-bold text-gray-900">
+                        <td className="td font-bold text-slate-900">
                           {currency.format(
                             discount(item.price, item.discount),
                             {

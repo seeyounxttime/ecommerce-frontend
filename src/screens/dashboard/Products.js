@@ -49,66 +49,70 @@ const Products = () => {
       {!isFetching ? (
         data?.products?.length > 0 ? (
           <div>
-            <table className="w-full bg-gray-900 rounded-md">
+            <table className="w-full bg-slate-900 rounded-md">
               <thead>
-                <tr className="border-b border-gray-800 text-left">
-                  <th className="p-3 uppercase text-sm font-medium text-gray-500">
+                <tr className="border-b border-slate-800 text-left">
+                  <th className="p-3 uppercase text-sm font-medium text-slate-500">
                     name
                   </th>
-                  <th className="p-3 uppercase text-sm font-medium text-gray-500">
+                  <th className="p-3 uppercase text-sm font-medium text-slate-500">
                     price
                   </th>
-                  <th className="p-3 uppercase text-sm font-medium text-gray-500">
+                  <th className="p-3 uppercase text-sm font-medium text-slate-500">
                     stock
                   </th>
-                  <th className="p-3 uppercase text-sm font-medium text-gray-500">
+                  <th className="p-3 uppercase text-sm font-medium text-slate-500">
                     image
                   </th>
-                  <th className="p-3 uppercase text-sm font-medium text-gray-500">
+                  <th className="p-3 uppercase text-sm font-medium text-slate-500">
                     edit
                   </th>
-                  <th className="p-3 uppercase text-sm font-medium text-gray-500">
+                  <th className="p-3 uppercase text-sm font-medium text-slate-500">
                     delete
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {data?.products?.map((product) => ( // render thông tin product
-                  <tr className="odd:bg-gray-800" key={product._id}>
-                    <td className="p-3 capitalize text-sm font-normal text-gray-400">
-                      {product.title}
-                    </td>
-                    <td className="p-3 capitalize text-sm font-normal text-gray-400">
-                      ${product.price}.00
-                    </td>
-                    <td className="p-3 capitalize text-sm font-normal text-gray-400">
-                      {product.stock}
-                    </td>
-                    <td className="p-3 capitalize text-sm font-normal text-gray-400">
-                      <img
-                        src={`/images/${product.image1}`}
-                        alt="image name"
-                        className="w-20 h-20 rounded-md object-cover"
-                      />
-                    </td>
-                    <td className="p-3 capitalize text-sm font-normal text-gray-400">
-                      <Link
-                        to={`/dashboard/edit-product/${product._id}`}
-                        className="btn btn-warning"
-                      >
-                        edit
-                      </Link>
-                    </td>
-                    <td className="p-3 capitalize text-sm font-normal text-gray-400">
-                      <span
-                        className="btn btn-danger cursor-pointer"
-                        onClick={() => deleteProduct(product._id)}
-                      >
-                        delete
-                      </span>
-                    </td>
-                  </tr>
-                ))}
+                {data?.products?.map(
+                  (
+                    product // render thông tin product
+                  ) => (
+                    <tr className="odd:bg-slate-800" key={product._id}>
+                      <td className="p-3 capitalize text-sm font-normal text-slate-400">
+                        {product.title}
+                      </td>
+                      <td className="p-3 capitalize text-sm font-normal text-slate-400">
+                        ${product.price}.00
+                      </td>
+                      <td className="p-3 capitalize text-sm font-normal text-slate-400">
+                        {product.stock}
+                      </td>
+                      <td className="p-3 capitalize text-sm font-normal text-slate-400">
+                        <img
+                          src={`/images/${product.image1}`}
+                          alt="image name"
+                          className="w-20 h-20 rounded-md object-cover"
+                        />
+                      </td>
+                      <td className="p-3 capitalize text-sm font-normal text-slate-400">
+                        <Link
+                          to={`/dashboard/edit-product/${product._id}`}
+                          className="btn btn-warning"
+                        >
+                          edit
+                        </Link>
+                      </td>
+                      <td className="p-3 capitalize text-sm font-normal text-slate-400">
+                        <span
+                          className="btn btn-danger cursor-pointer"
+                          onClick={() => deleteProduct(product._id)}
+                        >
+                          delete
+                        </span>
+                      </td>
+                    </tr>
+                  )
+                )}
               </tbody>
             </table>
             <Pagination

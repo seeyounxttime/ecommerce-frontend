@@ -23,11 +23,12 @@ const SearchProducts = () => {
           <ProductSkeleton />
         ) : data.count > 0 ? (
           <>
-            <p className="text-base font-medium text-gray-700">
+            <p className="text-base font-medium text-slate-700">
               {data.count} products found for #{keyword} keyword
             </p>
             <div className="flex flex-wrap -mx-5">
-              {data.products.map((product) => { // tìm sản phẩm theo keyword
+              {data.products.map((product) => {
+                // tìm sản phẩm theo keyword
                 return <ProductCard product={product} key={product._id} />;
               })}
             </div>

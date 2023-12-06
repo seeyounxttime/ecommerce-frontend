@@ -113,7 +113,7 @@ const EditProduct = () => {
       {!fetching ? (
         <div className="flex flex-wrap -mx-3">
           <form className="w-full xl:w-8/12 p-3" onSubmit={createPro}>
-            <h3 className="pl-3 capitalize text-lg font-medium text-gray-400">
+            <h3 className="pl-3 capitalize text-lg font-medium text-slate-400">
               edit product
             </h3>
             <div className="flex flex-wrap">

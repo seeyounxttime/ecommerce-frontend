@@ -49,7 +49,7 @@ const Orders = () => {
                       <td className="dashboard-td">
                         <Link
                           to={`/dashboard/order-details/${order._id}`}
-                          className="btn btn-warning bg-indigo-600 text-xs font-bold"
+                          className="btn btn-warning bg-sky-600 text-xs font-bold"
                         >
                           details
                         </Link>

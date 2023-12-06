@@ -33,7 +33,7 @@ const ReviewForm = ({ state, toggleReview, data }) => {
       <div className="fixed inset-0 w-full h-full bg-black/40 z-[1000] flex items-center justify-center">
         <div className="w-[90%] sm:w-8/12 md:w-6/12 lg:w-4/12">
           <div className="bg-white p-5">
-            <h1 className="mb-3 capitalize text-base font-medium text-gray-700">
+            <h1 className="mb-3 capitalize text-base font-medium text-slate-700">
               add a review
             </h1>
             {response.isError &&

@@ -48,7 +48,7 @@ const Login = () => {
           >
             <form
               onSubmit={onSubmit}
-              className="bg-white rounded-lg -mt-12 border border-gray-200 p-10"
+              className="bg-white rounded-lg -mt-12 border border-slate-200 p-10"
             >
               <h1 className="heading mb-5">sign in</h1>
               <div className="mb-4">
@@ -62,7 +62,7 @@ const Login = () => {
                   className={`form-input ${
                     showError(errors, "email")
                       ? "border-rose-600 bg-rose-50"
-                      : "border-gray-300 bg-white"
+                      : "border-slate-300 bg-white"
                   }`}
                   placeholder="Email..."
                   value={state.email}
@@ -83,7 +83,7 @@ const Login = () => {
                   className={`form-input ${
                     showError(errors, "password")
                       ? "border-rose-600 bg-rose-50"
-                      : "border-gray-300 bg-white"
+                      : "border-slate-300 bg-white"
                   }`}
                   placeholder="Password..."
                   value={state.password}
