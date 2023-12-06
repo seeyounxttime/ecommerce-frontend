@@ -49,7 +49,7 @@ const CreateProduct = () => {
     image2: "",
     image3: "",
   });
-  const imageHandle = (e) => { // xử lý hình ảnh up lên
+  const imageHandle = (e) => {
     if (e.target.files.length !== 0) {
       setState({ ...state, [e.target.name]: e.target.files[0] });
       const reader = new FileReader();
@@ -62,22 +62,22 @@ const CreateProduct = () => {
   const handleInput = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
-  const saveColors = (color) => { // xử lý lưu màu cho product
+  const saveColors = (color) => {
     const filtered = state.colors.filter((clr) => clr.color !== color.hex);
     setState({
       ...state,
       colors: [...filtered, { color: color.hex, id: uuidv4() }],
     });
   };
-  const deleteColor = (color) => { // xử lý xóa màu cho product
+  const deleteColor = (color) => {
     const filtered = state.colors.filter((clr) => clr.color !== color.color);
     setState({ ...state, colors: filtered });
   };
-  const chooseSize = (sizeObject) => { // xử lý chọn size cho product
+  const chooseSize = (sizeObject) => {
     const filtered = sizeList.filter((size) => size.name !== sizeObject.name);
     setSizeList([...filtered, sizeObject]);
   };
-  const deleteSize = (name) => { // xử lý xóa size cho product
+  const deleteSize = (name) => {
     const filtered = sizeList.filter((size) => size.name !== name);
     setSizeList(filtered);
   };
@@ -190,7 +190,7 @@ const CreateProduct = () => {
                     value={state.category}
                   >
                     <option value="">Choose category</option>
-                    {data?.categories?.map((category) => ( // chọn category cho product
+                    {data?.categories?.map((category) => (
                       <option value={category.name} key={category._id}>
                         {category.name}
                       </option>
@@ -212,7 +212,7 @@ const CreateProduct = () => {
               <label htmlFor="sizes" className="label">
                 choose sizes
               </label>
-              {sizes.length > 0 && ( // chọn size cho product
+              {sizes.length > 0 && (
                 <div className="flex flex-wrap -mx-3">
                   {sizes.map((size) => (
                     <div
