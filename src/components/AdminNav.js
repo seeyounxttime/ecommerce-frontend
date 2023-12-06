@@ -13,7 +13,7 @@ const AdminNav = ({ openSidebar }) => {
           onClick={openSidebar}
         ></i>
         <button
-          className="fixed top-0 left-0 right-0 py-2 px-4 bg-sky-600 text-white rounded-md capitalize"
+          className="sticky py-2 px-4 bg-sky-600 text-white rounded-md capitalize"
           onClick={adminLogout}
         >
           logout
