@@ -24,7 +24,7 @@ const AdminLogin = () => {
   };
   const dispatch = useDispatch();
   useEffect(() => {
-    if (response.isSuccess) { // nếu đăng nhập thành công thì chuyển trang tới trang tạo sản phẩm và xem sản phẩm đã tạo
+    if (response.isSuccess) {
       localStorage.setItem("admin-token", response?.data?.token);
       dispatch(setAdminToken(response?.data?.token));
       navigate("/dashboard/products");
@@ -69,7 +69,7 @@ const AdminLogin = () => {
           <input
             type="submit"
             value={response.isLoading ? "Loading..." : "sign in"}
-            className="bg-indigo-600 w-full p-4 rounded text-white uppercase font-semibold cursor-pointer"
+            className="bg-sky-600 w-full p-4 rounded text-white uppercase font-semibold cursor-pointer"
           />
         </div>
       </form>
