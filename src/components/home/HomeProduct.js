@@ -10,7 +10,7 @@ const HomeProduct = ({ category }) => {
   return isFetching ? (
     <ProductSkeleton />
   ) : (
-    data?.products?.length > 0 && ( // hiện sản phẩm ở trang home
+    data?.products?.length > 0 && ( 
       <>
         <div className="flex justify-between">
           <span className="text-lg font-medium capitalize">
