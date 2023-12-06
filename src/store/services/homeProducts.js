@@ -8,20 +8,20 @@ const homeProducts = createApi({
   endpoints: (builder) => {
     return {
       catProducts: builder.query({
-        // định nghĩa endpoints
+        
         query: (params) => {
           return {
-            // lấy sản phẩm
+            
             url: `cat-products/${params.name}/${params.page}`,
             method: "GET",
           };
         },
       }),
       searchProducts: builder.query({
-        // định nghĩa endpoints
+        
         query: (params) => {
           return {
-            // tìm sản phẩm
+            
             url: `search-products/${params.keyword}/${params.page}`,
             method: "GET",
           };
