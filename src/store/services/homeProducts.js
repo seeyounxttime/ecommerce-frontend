@@ -3,21 +3,25 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const homeProducts = createApi({
   reducerPath: "homeProducts",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://ecommerce-kxrg.onrender.com/api/",
+    baseUrl: "https://misty-colt-hoodie.cyclic.app/api/",
   }),
   endpoints: (builder) => {
     return {
-      catProducts: builder.query({ // định nghĩa endpoints
+      catProducts: builder.query({
+        // định nghĩa endpoints
         query: (params) => {
-          return { // lấy sản phẩm
+          return {
+            // lấy sản phẩm
             url: `cat-products/${params.name}/${params.page}`,
             method: "GET",
           };
         },
       }),
-      searchProducts: builder.query({ // định nghĩa endpoints
+      searchProducts: builder.query({
+        // định nghĩa endpoints
         query: (params) => {
-          return { // tìm sản phẩm
+          return {
+            // tìm sản phẩm
             url: `search-products/${params.keyword}/${params.page}`,
             method: "GET",
           };

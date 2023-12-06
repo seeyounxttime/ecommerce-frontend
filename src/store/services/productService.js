@@ -4,7 +4,7 @@ const productService = createApi({
   reducerPath: "products",
   tagTypes: "products",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://ecommerce-kxrg.onrender.com/api/",
+    baseUrl: "https://misty-colt-hoodie.cyclic.app/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.adminToken;
@@ -15,8 +15,10 @@ const productService = createApi({
   }),
   endpoints: (builder) => {
     return {
-      cProduct: builder.mutation({ // gửi data cập nhật tới server và áp dụng thay đổi với local cache
-        query: (data) => { // tạo sản phẩm
+      cProduct: builder.mutation({
+        // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+        query: (data) => {
+          // tạo sản phẩm
           return {
             url: "/create-product",
             method: "POST",
@@ -25,8 +27,10 @@ const productService = createApi({
         },
         invalidatesTags: ["products"],
       }),
-      updateProduct: builder.mutation({ // gửi data cập nhật tới server và áp dụng thay đổi với local cache
-        query: (data) => { // cập nhật sản phẩm
+      updateProduct: builder.mutation({
+        // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+        query: (data) => {
+          // cập nhật sản phẩm
           return {
             url: "/product",
             method: "PUT",
@@ -35,8 +39,10 @@ const productService = createApi({
         },
         invalidatesTags: ["products"],
       }),
-      deleteProduct: builder.mutation({ // gửi data cập nhật tới server và áp dụng thay đổi với local cache
-        query: (id) => { // xóa sản phẩm
+      deleteProduct: builder.mutation({
+        // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+        query: (id) => {
+          // xóa sản phẩm
           return {
             url: `/delete/${id}`,
             method: "DELETE",
@@ -44,8 +50,10 @@ const productService = createApi({
         },
         invalidatesTags: ["products"],
       }),
-      getProducts: builder.query({ // gửi data cập nhật tới server và áp dụng thay đổi với local cache
-        query: (page) => { // lấy nhiều sản phẩm
+      getProducts: builder.query({
+        // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+        query: (page) => {
+          // lấy nhiều sản phẩm
           return {
             url: `/products/${page}`,
             method: "GET",
@@ -53,8 +61,10 @@ const productService = createApi({
         },
         providesTags: ["products"],
       }),
-      getProduct: builder.query({ // gửi data cập nhật tới server và áp dụng thay đổi với local cache
-        query: (id) => { // lấy 1 sản phẩm
+      getProduct: builder.query({
+        // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+        query: (id) => {
+          // lấy 1 sản phẩm
           return {
             url: `/product/${id}`,
             method: "GET",

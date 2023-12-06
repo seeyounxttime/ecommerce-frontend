@@ -92,7 +92,7 @@ const DetailsCard = ({ product }) => {
               {product.sizes.map((size) => (
                 <div
                   className={`p-2 m-1 border border-gray-300 rounded cursor-pointer ${
-                    sizeState === size.name && "bg-indigo-600"
+                    sizeState === size.name && "bg-sky-600"
                   }`}
                   key={size.name}
                   onClick={() => setSizeState(size.name)}
@@ -139,7 +139,7 @@ const DetailsCard = ({ product }) => {
             <Quantity quantity={quantity} inc={inc} dec={dec} />
           </div>
           <div className="w-full sm:w-6/12 p-3">
-            <button className="btn btn-indigo" onClick={addToCart}>
+            <button className="btn btn-sky" onClick={addToCart}>
               add to cart
             </button>
           </div>

@@ -62,7 +62,7 @@ const UpdateCategory = () => {
             />
           </div>
           <div className="mb-3">
-            <input type="submit" value="Update" className="btn btn-indigo" />
+            <input type="submit" value="Update" className="btn btn-sky" />
           </div>
         </form>
       ) : (

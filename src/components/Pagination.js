@@ -18,7 +18,7 @@ const Pagination = ({ page, count, perPage, path, theme }) => {
           <Link
             className={` ${
               theme === "light" ? "pagination-link-light" : "pagination-link"
-            }  ${page === i && "bg-indigo-500 text-white"}`}
+            }  ${page === i && "bg-sky-500 text-white"}`}
             to={`/${path}/${i}`}
           >
             {i}

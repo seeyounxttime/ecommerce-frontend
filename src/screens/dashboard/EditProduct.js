@@ -241,7 +241,7 @@ const EditProduct = () => {
                   type="submit"
                   value={response.isLoading ? "loading..." : "save product"}
                   disabled={response.isLoading ? true : false}
-                  className="btn btn-indigo"
+                  className="btn btn-sky"
                 />
               </div>
             </div>

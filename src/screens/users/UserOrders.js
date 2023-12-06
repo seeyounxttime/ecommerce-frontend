@@ -16,6 +16,7 @@ const UserOrders = () => {
   page = page ? page : 1;
   const { user } = useSelector((state) => state.authReducer);
   const { data, isFetching } = useGetOrdersQuery({ page, userId: user.id });
+  // eslint-disable-next-line no-unused-vars
   const [updateOrder, response] = useReceivedOrderMutation();
   const orderReceived = (id) => {
     updateOrder(id);
@@ -73,7 +74,7 @@ const UserOrders = () => {
                                 <td className="td">
                                   <Link
                                     to={`/user-order-details/${item._id}`}
-                                    className="btn btn-indigo"
+                                    className="btn btn-sky"
                                   >
                                     details
                                   </Link>
@@ -86,7 +87,7 @@ const UserOrders = () => {
                                       </span>
                                     ) : (
                                       <button
-                                        className="btn btn-indigo"
+                                        className="btn btn-sky"
                                         onClick={() => orderReceived(item._id)}
                                       >
                                         received?
@@ -113,7 +114,7 @@ const UserOrders = () => {
                     />
                   </>
                 ) : (
-                  <div className="bg-indigo-50 border border-indigo-100 rounded px-4 py-2.5 capitalize text-indigo-900 text-sm font-medium">
+                  <div className="bg-sky-50 border border-sky-100 rounded px-4 py-2.5 capitalize text-sky-900 text-sm font-medium">
                     no orders
                   </div>
                 )

@@ -88,7 +88,7 @@ const ReviewForm = ({ state, toggleReview, data }) => {
                 <input
                   type="submit"
                   value="add review"
-                  className="btn-indigo rounded"
+                  className="btn-sky rounded"
                 />
                 <button
                   className="px-4 py-2 text-sm font-medium bg-rose-600 capitalize text-white rounded"

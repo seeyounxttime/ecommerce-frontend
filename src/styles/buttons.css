@@ -4,8 +4,8 @@
 .btn-dark {
   @apply bg-gray-900 px-4 py-3 capitalize font-medium;
 }
-.btn-indigo {
-  @apply bg-indigo-600 text-white capitalize font-medium px-4 py-3 cursor-pointer !important;
+.btn-sky {
+  @apply bg-sky-600 text-white capitalize font-medium px-4 py-3 cursor-pointer !important;
 }
 .btn-warning {
   @apply bg-orange-400 py-[6px];

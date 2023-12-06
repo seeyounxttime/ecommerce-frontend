@@ -86,19 +86,20 @@ const UserOrderDetails = () => {
                         )}
                       />
                     )}
-                    {data?.details?.received && !data?.details?.review && ( // xác nhận đã nhận hàng và chưa có đánh giá
-                      <div className="flex mt-2 items-center justify-between">
-                        <h4 className="capitalize text-base font-normal text-gray-600 mr-5">
-                          add rating
-                        </h4>
-                        <button
-                          className="btn-indigo rounded !py-2 !text-sm"
-                          onClick={() => toggleReview()}
-                        >
-                          add reivew
-                        </button>
-                      </div>
-                    )}
+                    {data?.details?.received &&
+                      !data?.details?.review && ( // xác nhận đã nhận hàng và chưa có đánh giá
+                        <div className="flex mt-2 items-center justify-between">
+                          <h4 className="capitalize text-base font-normal text-gray-600 mr-5">
+                            add rating
+                          </h4>
+                          <button
+                            className="btn-sky rounded !py-2 !text-sm"
+                            onClick={() => toggleReview()}
+                          >
+                            add reivew
+                          </button>
+                        </div>
+                      )}
 
                     <div className="overflow-x-auto mt-4">
                       <table className="w-full">

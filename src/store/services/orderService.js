@@ -4,7 +4,7 @@ const orderService = createApi({
   reducerPath: "orders",
   tagTypes: "orders",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://ecommerce-kxrg.onrender.com/api/",
+    baseUrl: "https://misty-colt-hoodie.cyclic.app/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.adminToken;
@@ -14,8 +14,10 @@ const orderService = createApi({
   }),
   endpoints: (builder) => {
     return {
-      getOrders: builder.query({ // định nghĩa endpoints
-        query: (page) => { // lấy thông tin order
+      getOrders: builder.query({
+        // định nghĩa endpoints
+        query: (page) => {
+          // lấy thông tin order
           return {
             url: `/orders?page=${page}`,
             method: "GET",
@@ -23,8 +25,10 @@ const orderService = createApi({
         },
         providesTags: ["orders"],
       }),
-      details: builder.query({ // định nghĩa endpoints
-        query: (id) => { // lấy chi tiết order
+      details: builder.query({
+        // định nghĩa endpoints
+        query: (id) => {
+          // lấy chi tiết order
           return {
             url: `/order-details/${id}`,
             method: "GET",
@@ -32,8 +36,10 @@ const orderService = createApi({
         },
         providesTags: ["orders"],
       }),
-      deliverOrder: builder.mutation({ // định nghĩa endpoints
-        query: (id) => { // tình trạng order
+      deliverOrder: builder.mutation({
+        // định nghĩa endpoints
+        query: (id) => {
+          // tình trạng order
           return {
             url: `/order-update?id=${id}&status=delivered`,
             method: "PUT",

@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const paymentService = createApi({
   reducerPath: "payment",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://ecommerce-kxrg.onrender.com/api/",
+    baseUrl: "https://misty-colt-hoodie.cyclic.app/api/",
     prepareHeaders: (headers, { getState }) => {
       const reducers = getState();
       const token = reducers?.authReducer?.userToken;
@@ -13,8 +13,10 @@ const paymentService = createApi({
   }),
   endpoints: (builder) => {
     return {
-      sendPayment: builder.mutation({ // gửi data cập nhật tới server và áp dụng thay đổi với local cache
-        query: (cart) => { // tạo trang thanh toán
+      sendPayment: builder.mutation({
+        // gửi data cập nhật tới server và áp dụng thay đổi với local cache
+        query: (cart) => {
+          // tạo trang thanh toán
           return {
             url: "/create-checkout-session",
             method: "POST",
@@ -22,8 +24,10 @@ const paymentService = createApi({
           };
         },
       }),
-      verifyPayment: builder.query({ // định nghĩa endpoints
-        query: (id) => { // lấy thông tin thanh toán
+      verifyPayment: builder.query({
+        // định nghĩa endpoints
+        query: (id) => {
+          // lấy thông tin thanh toán
           return {
             url: `verify-payment/${id}`,
             method: "GET",
