@@ -25,7 +25,6 @@ const Cart = () => {
     dispatch(decQuantity(id));
   };
   const remove = (id) => {
-    // verify user that you are really want to delete the project or item
     if (window.confirm("Are you sure you want to delete this item?")) {
       dispatch(removeItem(id));
     }
@@ -73,7 +72,6 @@ const Cart = () => {
                 </thead>
                 <tbody>
                   {cart.map((item) => {
-                    // render sản phẩm trong giỏ hàng
                     const total = currency.format(
                       discount(item.price, item.discount) * item.quantity,
                       {
