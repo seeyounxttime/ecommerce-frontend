@@ -75,14 +75,14 @@ const UserOrderDetails = () => {
                     <DetailsList
                       label="order date"
                       data={moment(data?.details?.createdAt).format(
-                        "MMMM Do YYYY"
+                        "MM DD YYYY"
                       )}
                     />
                     {data?.details?.received && ( // xác nhận đã nhận hàng
                       <DetailsList
                         label="received date"
                         data={moment(data?.details?.updatedAt).format(
-                          "MMMM DD YYYY"
+                          "MM DD YYYY"
                         )}
                       />
                     )}

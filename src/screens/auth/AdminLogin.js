@@ -69,7 +69,7 @@ const AdminLogin = () => {
           <input
             type="submit"
             value={response.isLoading ? "Loading..." : "sign in"}
-            className="bg-indigo-600 w-full p-4 rounded text-white uppercase font-semibold cursor-pointer"
+            className="bg-sky-600 w-full p-4 rounded text-white uppercase font-semibold cursor-pointer"
           />
         </div>
       </form>
