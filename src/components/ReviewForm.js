@@ -87,7 +87,7 @@ const ReviewForm = ({ state, toggleReview, data }) => {
               <div className="mt-3 flex justify-between">
                 <input
                   type="submit"
-                  value="add reivew"
+                  value="add review"
                   className="btn-indigo rounded"
                 />
                 <button

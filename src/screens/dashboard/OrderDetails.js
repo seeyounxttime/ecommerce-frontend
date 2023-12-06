@@ -121,13 +121,13 @@ const OrderDetails = () => {
                         {data?.details?.size ? data?.details?.size : "No size"}
                       </td>
                       <td className="dashboard-td">
-                        {currency.format(total, { code: "USD" })}
-                      </td>
-                      <td className="dashboard-td">
                         <span
                           className="block w-[15px] h-[15px] rounded-full"
                           style={{ background: data?.details?.color }}
                         ></span>
+                      </td>
+                      <td className="dashboard-td">
+                        {currency.format(total, { code: "USD" })}
                       </td>
                     </tr>
                   </tbody>
