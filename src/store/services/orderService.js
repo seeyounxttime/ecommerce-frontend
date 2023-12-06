@@ -15,9 +15,7 @@ const orderService = createApi({
   endpoints: (builder) => {
     return {
       getOrders: builder.query({
-        
         query: (page) => {
-          
           return {
             url: `/orders?page=${page}`,
             method: "GET",
@@ -26,9 +24,7 @@ const orderService = createApi({
         providesTags: ["orders"],
       }),
       details: builder.query({
-         endpoints
         query: (id) => {
-          
           return {
             url: `/order-details/${id}`,
             method: "GET",
@@ -37,9 +33,7 @@ const orderService = createApi({
         providesTags: ["orders"],
       }),
       deliverOrder: builder.mutation({
-        
         query: (id) => {
-          
           return {
             url: `/order-update?id=${id}&status=delivered`,
             method: "PUT",
